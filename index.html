@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>devfinder</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp"></script>
+    <script>
+      tailwind.config = {
+        darkMode: "class",
+        lightMode: "class",
+        theme: {
+          screen: {
+            lg: "730px",
+          },
+        },
+      };
+    </script>
+  </head>
+  <body class="transition duration-300 bg-[#F6F8FF] dark:bg-[#141D2F]">
+    <div class="w-[730px] mx-auto">
+      <header
+        class="flex justify-between py-9 lg:w-[730px] sm:w-[327px] md:w-[573px]"
+      >
+        <a
+          class="font-mono text-[#222731] font-bold text-2xl transition duration-300 hover:opacity-50 dark:text-white"
+          href="#"
+          >devfinder</a
+        >
+        <button
+          class="transition duration-200 font-mono text-[#697C9A] text-sm hover:text-red-600"
+          id="dark-btn"
+        >
+          DARK <i class="fa-solid fa-moon"></i>
+        </button>
+      </header>
+
+      <form
+        class="rounded-2xl lg:w-[730px] sm:w-[327px] md:w-[573px] shadow-2xl"
+      >
+        <label
+          for="search"
+          class="mb-2 text-sm font-medium text-gray-900 sr-only dark:text-white"
+          >Search</label
+        >
+        <div class="relative">
+          <div
+            class="absolute inset-y-0 start-0 flex items-center ps-3 pointer-events-none"
+          >
+            <svg
+              class="w-4 h-4 text-gray-500 dark:text-gray-400"
+              aria-hidden="true"
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 20 20"
+            >
+              <path
+                class="text-[#0079FF]"
+                stroke="currentColor"
+                stroke-linecap="round"
+                stroke-linejoin="round"
+                stroke-width="2"
+                d="m19 19-4-4m0-7A7 7 0 1 1 1 8a7 7 0 0 1 14 0Z"
+              />
+            </svg>
+          </div>
+          <input
+            type="search"
+            id="search"
+            class="block w-full p-4 ps-10 text-sm text-gray-900 border-none rounded-lg bg-[#FEFEFE] focus:ring-blue-500 focus:border-blue-500 dark:bg-[#1E2A47] dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+            placeholder="Search GitHub username..."
+            required
+          />
+          <button
+            type="submit"
+            class="text-white absolute end-2.5 bottom-2.5 bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-4 py-2 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
+          >
+            Search
+          </button>
+        </div>
+      </form>
+      <section
+        class="card rounded-2xl lg:w-[730px] sm:w-[327px] md:w-[573px] shadow-2xl bg-[#FEFEFE] my-8 p-7 dark:bg-[#1E2A47]"
+      >
+        <div class="card-header flex justify-between">
+          <img
+            id="user-img"
+            class="rounded-full w-28 h-28"
+            src="./image/Bitmap.png"
+            alt=""
+          />
+          <div class="card-titile">
+            <h2
+              id="user-name"
+              class="font-mono text-lg font-bold not-italic dark:text-white"
+            >
+              The Octocat
+            </h2>
+            <a
+              id="git-link"
+              class="font-mono text-[#0079FF] text-base font-normal dark:text-[#0079FF]"
+              href="#"
+              >@octocat</a
+            >
+            <p
+              class="font-mono text-[#4B6A9B] text-sm opacity-75 mt-5 dark:text-white"
+            >
+              This profile has no bio
+            </p>
+          </div>
+          <div
+            id="created-data"
+            class="card-date font-mono text-[#697C9A] text-base font-normal"
+          >
+            Joined 25 Jan 2011
+          </div>
+        </div>
+        <div class="card-info">
+          <ul
+            class="flex gap-32 ml-52 p-4 bg-[#F6F8FF] rounded-2xl dark:bg-[#141D2F]"
+          >
+            <li>
+              <p class="text-[#4B6A9B] font-mono text-xs dark:text-white">
+                Repos
+              </p>
+              <h4
+                id="repos"
+                class="font-mono text-[#2B3442] text-2xl font-bold dark:text-white"
+              >
+                8
+              </h4>
+            </li>
+            <li>
+              <p class="text-[#4B6A9B] font-mono text-xs dark:text-white">
+                Followers
+              </p>
+              <h4
+                id="flowers"
+                class="font-mono text-[#2B3442] text-2xl font-bold dark:text-white"
+              >
+                3938
+              </h4>
+            </li>
+            <li>
+              <p class="text-[#4B6A9B] font-mono text-xs dark:text-white">
+                Following
+              </p>
+              <h4
+                id="flowing"
+                class="font-mono text-[#2B3442] text-2xl font-bold dark:text-white"
+              >
+                9
+              </h4>
+            </li>
+          </ul>
+        </div>
+        <div class="card-contact w-[430px] ml-52 mt-14">
+          <ul class="flex flex-wrap gap-4 justify-between">
+            <li>
+              <a
+                id="location"
+                class="text-[#4B6A9B] font-mono text-sm hover:underline dark:text-white"
+                href="#"
+                ><i class="fa-solid fa-location-dot"></i> San Francisco</a
+              >
+            </li>
+            <li>
+              <a
+                id="twitter"
+                class="text-[#4B6A9B] font-mono text-sm opacity-25 hover:underline dark:text-white"
+                href="#"
+                ><i class="fa-brands fa-twitter"></i> Not Available</a
+              >
+            </li>
+            <li>
+              <a
+                id="github"
+                class="text-[#4B6A9B] font-mono text-sm hover:underline dark:text-white"
+                href="#"
+                ><i class="fa-brands fa-github"></i> https://github.blog</a
+              >
+            </li>
+            <li>
+              <a
+                class="text-[#4B6A9B] font-mono text-sm hover:underline dark:text-white"
+                href="#"
+                ><i class="fa-brands fa-git-alt"></i> @github</a
+              >
+            </li>
+          </ul>
+        </div>
+      </section>
+    </div>
+    <script type="module" src="./js/app.js"></script>
+  </body>
+</html>
